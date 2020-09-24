@@ -1,1 +1,23 @@
-<p>diary works!</p>
+
+<div class="container">
+    <app-create-diary></app-create-diary>
+    
+    <table class="table table-striped table-dark" >
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor='let diary of diaries'>
+            <th>{{diary.id}}</th>
+            <td>{{diary.title|uppercase}}</td>
+            <td>{{diary.description}}</td>
+            <td>{{diary.date|date}}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
